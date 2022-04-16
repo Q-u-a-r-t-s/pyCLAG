@@ -59,7 +59,11 @@ def execute(cmnds):
                 n *= 8
                 n += nums[cmnds[cmnd+pwr+1]]
                 pwr += 1
-            array[index] -= n
+            if array[index] - n > -1:
+                array[index] -= n
+            else:
+                print('Error: cell value cannot be negative')
+                break
             cmnd += pwr
 
         elif cmnds[cmnd] == 'oо':
