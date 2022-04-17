@@ -70,7 +70,8 @@ def execute(cmnds):
             print(chr(array[index]), end='')
 
         elif cmnds[cmnd] == 'oo':
-            array[index] = ord(input('\n> '))
+            inp = input('\n> ')
+            array[index] = sum(map(ord, inp))
 
         elif cmnds[cmnd] == 'oօ':
             if array[index] != 0:
